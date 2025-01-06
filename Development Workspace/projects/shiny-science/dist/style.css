@@ -1,0 +1,243 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.open-sans-regular {
+  font-family: "Open Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.open-sans-bold {
+  font-family: "Open Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-light-gray: #d3d3d3;
+  --color-gray: #6c757d;
+  --color-dark-gray: #343a40;
+  --color-lavender-pink: #fae0fb;
+  --color-purple-amethyst: #a855cb;
+  --color-purple-plum: #7e3cb2;
+  --color-orchid: #cc78df;
+  --color-mauve: #e6a4ef;
+  --color-purple-indigo: #5b2991;
+  --color-dark-violet: #1d0848;
+  --text-center: center;
+  --text-left: left;
+  --text-right: right;
+  --text-justify: justify;
+  --border-thin: 0.0625em; /* Thin border (1px equivalent) */
+  --border-medium: 0.125em; /* Medium border (2px equivalent) */
+  --border-thick: 0.25em; /* Thick border (4px equivalent) */
+  --border-x-thick: 0.375em; /* Extra thick border (6px equivalent) */
+  --size-small: 0.3125em; /* 5px */
+  --size-medium: 0.625em; /* 10px */
+  --letter-spacing-small: 0.03em;
+  --letter-spacing-medium: 0.05em;
+  --letter-spacing-large: 0.1em;
+  --letter-spacing-xlarge: 0.15em;
+  --base-font-size: 1em; /* Default font size, equivalent to 16px */
+  --font-size-xs: 0.75em; /* Extra small (12px) */
+  --font-size-sm: 0.875em; /* Small (14px) */
+  --font-size-md: 1em; /* Medium (16px) - default size */
+  --font-size-lg: 1.125em; /* Large (18px) */
+  --font-size-xl: 1.25em; /* Extra large (20px) */
+  --font-size-xxl: 1.5em; /* Double extra large (24px) */
+  --font-size-xxxl: 2em; /* Triple extra large (32px) */
+  --font-weight-light: 300; /* Light font weight */
+  --font-weight-normal: 400; /* Normal font weight */
+  --font-weight-semibold: 500; /* Semi-bold font weight */
+  --font-weight-bold: 700; /* Bold font weight */
+  --font-weight-extrabold: 800; /* Extra-bold font weight */
+  --font-weight-black: 900; /* Black (heaviest) font weight */
+}
+
+body {
+  background-color: var(--color-white);
+  font-family: "Open Sans", serif;
+}
+
+.container,
+.container-fluid {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-inline: calc(var(--bs-gutter-x) * 0.5);
+  margin-inline: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-inline: calc(-0.5 * var(--bs-gutter-x));
+}
+
+.row > * {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-inline: calc(var(--bs-gutter-x) * 0.5);
+  margin-top: var(--bs-gutter-y);
+}
+
+.col-auto {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+.col-1 {
+  flex: 0 0 auto;
+  width: 8.33%;
+}
+
+.col-2 {
+  flex: 0 0 auto;
+  width: 16.66%;
+}
+
+.col-3 {
+  flex: 0 0 auto;
+  width: 25%;
+}
+
+.col-4 {
+  flex: 0 0 auto;
+  width: 33.33%;
+}
+
+.col-5 {
+  flex: 0 0 auto;
+  width: 41.66%;
+}
+
+.col-6 {
+  flex: 0 0 auto;
+  width: 50%;
+}
+
+.col-7 {
+  flex: 0 0 auto;
+  width: 58.33%;
+}
+
+.col-8 {
+  flex: 0 0 auto;
+  width: 66.66%;
+}
+
+.col-9 {
+  flex: 0 0 auto;
+  width: 75%;
+}
+
+.col-10 {
+  flex: 0 0 auto;
+  width: 83.33%;
+}
+
+.col-11 {
+  flex: 0 0 auto;
+  width: 91.66%;
+}
+
+.col-12 {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}/*# sourceMappingURL=style.css.map */

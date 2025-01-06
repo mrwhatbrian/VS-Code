@@ -1,0 +1,450 @@
+@media only screen and (min-width: 52.125em) and (max-width: 74.625em) {
+
+    /* Overide */
+    .theory-phases {
+      padding: 2em 0;
+    }
+
+  /* Grid */
+  .col-9 > .content-fun-fact,
+  .col-9 > .profile-item,
+  .col-9 > .contact-item,
+  .col-9 > .galaxy-item,
+  .col-9 > .footer-menu {
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+  }
+
+  .col-9 > .media-item,
+  .col-9 > .contact-list {
+    grid-template-columns: 1fr;
+    gap: 1em;
+  }
+  /* End Grid */
+
+  /* Grid */
+ 
+
+
+  /* .col-9 > .content-item,
+  .col-9 > .content-stars-item,
+  .col-9 > .content-hero-item,
+  .col-9 > .galaxy-item,
+ {
+    grid-template-columns: 1fr;
+    gap: 2em;
+  } */
+
+}
+
+@media only screen and (min-width: 20.001em) and (max-width: 52.124em) {
+
+  /* Default Settings */
+  .row > [class*="col-"] {
+    flex-shrink: 0;
+    width: 100%;
+  }
+
+  .col-9 {
+    width: 100%;
+  }
+
+  .contact-banner-img,
+  .footer-content > .contact-banner-img {
+    min-height: 200px;
+  }
+
+  .right-banner > .about-banner-img,
+  .hero-img {
+    min-height: 180px;
+    /* background-position: center bottom; */
+  }
+
+  .right-content > .mav-content-img {
+    margin-top: 2em;
+    min-height: 300px;
+  }
+
+  /* Overide */
+  .theory-phases {
+    padding: 2em 0;
+  }
+
+  .px-lg-5 {
+    padding: 0;
+  }
+
+  /* Styles */
+  .border {
+    max-width: 90%;
+  }
+
+  /* HOME: Did You Know Section */
+  .media-image > .image {
+    border-top-left-radius: var(--size-medium);
+    border-top-right-radius: var(--size-medium);
+    border-bottom-left-radius: 0;
+  }
+  
+  .media > .media-text {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: var(--size-medium);
+    border-bottom-right-radius:  var(--size-medium);
+  }
+  /* End Styles */
+
+  /* Navigatioin */
+  .top-left-logo img {
+    width: auto;
+    height: 40px;
+  }
+
+  nav ul {
+    display: none;
+    width: 100%;
+    text-align: var(--text-center);
+    color: var(--purple-indigo);
+    background-color: var(--white);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 5;
+  }
+
+  .hamburger, nav ul.show {
+    display: block;
+  }
+
+  nav ul li {
+    margin: 0;
+  }
+
+  nav ul li a {
+    display: block;
+  }
+
+  nav ul li a:hover,
+  nav ul li a:focus,
+  nav ul li a:active {
+    background-color: transparent;
+    color: var(--purple-indigo);
+  }
+
+  nav li a.active {
+    border-radius: 0;
+  }
+  /* End Navigation */
+
+  /* Grid */
+  .col-9 > .media-item,
+  .col-9 > .contact-item,
+  .col-9 > .profile-item,
+  .col-9 > .footer-menu,
+  .col-9 > .contact-list,
+  .col-9 > .content-item,
+  .col-9 > .content-stars-item,
+  .col-9 > .content-hero-item,
+  .col-9 > .galaxy-item,
+  .col-9 > .content-fun-fact {
+    grid-template-columns: 1fr;
+    gap: 2em;
+  }
+  /* End Grid */
+
+  /* Text Align */
+  h1, h2, h3, h4, h5, h6, p, 
+  .justify, .align-left, .align-right,
+  .nav-list {
+    text-align: var(--text-center);
+  }
+  /* End Text Align */
+
+  /* Flex */
+  .content-fun-fact > .fun-fact,
+  .footer-sub-menu {
+    flex-direction: column;
+    align-items: center;
+    text-align: var(--text-center);
+  }
+
+  /* HOME: Hero Section */
+  .banner-bottom {  
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+   /* HOME: Episode Section */
+  .media { 
+    flex-direction: column;
+  }
+
+    /* BODY: reverse the image/text */
+    #tissues .row,
+    #skeletal-system .row,
+    #circulatory-system .row,
+    #digestive-system .row,
+    #urinary-system .row,
+    #endocrine-system .row,
+    #body-part-craft .row {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    
+    
+
+    .body-cells,
+    .body-tissues,
+    .body-organs,
+    .body-skeleton,
+    .body-muscular-system,
+    .body-circulatory-system,
+    .body-respiratory-system,
+    .body-digestive-system,
+    .body-nervous-system,
+    .body-urinary-system,
+    .body-lymphatic,
+    .body-endocrine,
+    .body-reproductive,
+    .body-hand-trace
+    {
+      min-height: 30vw;
+    }
+    .py-lg-5 {
+      padding-top: 1.5em !important;
+      padding-bottom: 1.5em !important;
+    }
+  /* End Flex */
+  .body-text ul li{
+    text-align: left;
+    margin: .25em auto;
+    width: 90%;
+    list-style:circle;
+    font-weight:lighter  
+  }
+  .body-text ol{    
+    width: 50%;
+    margin: 0 auto;
+  }
+  .body-text ol li{
+    text-align: left;
+    margin: .25em auto;
+    width: 90%;
+    font-weight:lighter  
+  }
+
+  .center-image-display, .intro-gif{
+    display: none;
+  }
+  .insect-image {
+    background-color: transparent;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 80%;
+    min-height: 200px;
+  }
+  .wrapper {
+    width: 100%;
+    padding: 0 0.5em;
+}
+}
+
+@media only screen and (max-width: 20em) {
+  /* Default Settings */
+  .row > [class*="col-"] {
+    flex-shrink: 0;
+    width: 100%;
+  }
+
+  .col-9 {
+    width: 100%;
+  }
+
+  .image,
+  .contact-banner-img {
+    min-height: 100px;
+    min-width: auto;
+  }
+
+  /* Overide */
+  .theory-phases {
+    padding: 2em 0;
+  }
+
+  .px-lg-5 {
+    padding: 0;
+  }
+
+  /* Styles */
+  .border {
+    max-width: 90%;
+  }
+
+  /* HOME: Did You Know Section */
+  .media-image > .image {
+    border-top-left-radius: var(--size-medium);
+    border-top-right-radius: var(--size-medium);
+    border-bottom-left-radius: 0;
+  }
+  
+  .media > .media-text {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: var(--size-medium);
+    border-bottom-right-radius:  var(--size-medium);
+  }
+  /* End Styles */
+
+  /* Navigatioin */
+  .top-left-logo img {
+    width: auto;
+    height: 40px;
+  }
+
+  nav ul {
+    display: none;
+    width: 100%;
+    text-align: var(--text-center);
+    color: var(--purple-indigo);
+    background-color: var(--white);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 5;
+  }
+
+  .hamburger, nav ul.show {
+    display: block;
+  }
+
+  nav ul li {
+    margin: 0;
+  }
+
+  nav ul li a {
+    display: block;
+  }
+
+  nav ul li a:hover,
+  nav ul li a:focus,
+  nav ul li a:active {
+    background-color: transparent;
+    color: var(--purple-indigo);
+  }
+
+  nav li a.active {
+    border-radius: 0;
+  }
+  /* End Navigation */
+
+  /* Grid */
+  .col-9 > .content-fun-fact {
+    grid-template-columns: 1fr;
+    gap: 0.5em;
+  }
+
+  .col-9 > .media-item,
+  .col-9 > .contact-item,
+  .col-9 > .profile-item,
+  .col-9 > .footer-menu,
+  .col-9 > .contact-list,
+  .col-9 > .content-item,
+  .col-9 > .content-stars-item,
+  .col-9 > .content-hero-item,
+  .col-9 > .galaxy-item {
+    grid-template-columns: 1fr;
+    gap: 2em;
+  }
+  /* End Grid */
+
+  /* Text Align */
+  h1, h2, h3, h4, h5, h6, p, 
+  .justify, .align-left, .align-right,
+  .nav-list {
+    text-align: var(--text-center);
+  }
+  /* End Text Align */
+
+  /* Flex */
+  .content-fun-fact > .fun-fact,
+  .footer-sub-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* HOME: Hero Section */
+  .banner-bottom {  
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+   /* HOME: Episode Section */
+  .media { 
+    flex-direction: column;
+  }
+
+  /* BODY: reverse the image/text */
+  #tissues .row,
+  #skeletal-system .row,
+  #circulatory-system .row,
+  #digestive-system .row,
+  #urinary-system .row,
+  #endocrine-system .row,
+  #body-part-craft .row {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  
+  .body-cells,
+  .body-tissues,
+  .body-organs,
+  .body-skeleton,
+  .body-muscular-system,
+  .body-circulatory-system,
+  .body-respiratory-system,
+  .body-digestive-system,
+  .body-nervous-system,
+  .body-urinary-system,
+  .body-lymphatic,
+  .body-endocrine,
+  .body-reproductive,
+  .body-hand-trace
+  {
+    min-height: 30vw;
+  }
+  /* End Flex */
+
+  .py-lg-5 {
+    padding-top: 1.5em !important;
+    padding-bottom: 1.5em !important;
+  }
+  .body-text ol{    
+    width: 50%;
+    margin: 0 auto;
+  }
+  .body-text ol li{
+    text-align: left;
+    margin: .25em auto;
+    width: 90%;
+    font-weight:lighter  
+  }
+  .center-image-display, .intro-gif{
+    display: none;
+  }
+  .insect-image {
+    background-color: transparent;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 80%;
+    min-height: 200px;
+  }
+  .wrapper {
+    width: 100%;
+    padding: 0 0.5em;
+}
+
+}

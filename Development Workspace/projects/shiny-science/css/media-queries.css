@@ -1,0 +1,201 @@
+/* Phones (portrait and landscape) */
+@media (max-width: 37.44em) {
+
+  .wrapper {
+    width: 100%;
+    padding: 0 0.5em;
+  }
+
+  .row > [class*="col-"] {
+    flex-shrink: 0;
+    width: 100%;
+  }
+
+  .col-9 {
+    width: 100%;
+  }
+
+  .border {
+    max-width: 90%;
+  }
+
+  /* Navigatioin */
+  .top-left-logo img {
+    width: auto;
+    height: 40px;
+  }
+
+  nav ul {
+    display: none;
+    width: 100%;
+    text-align: var(--text-center);
+    color: var(--purple-indigo);
+    background-color: var(--white);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 5;
+  }
+
+  .hamburger, nav ul.show {
+    display: block;
+  }
+
+  nav ul li {
+    margin: 0;
+  }
+
+  nav ul li a {
+    display: block;
+  }
+
+  nav ul li a:hover,
+  nav ul li a:focus,
+  nav ul li a:active {
+    background-color: transparent;
+    color: var(--purple-indigo);
+  }
+
+  nav li a.active {
+    border-radius: 0;
+  }
+  /* End Navigation */
+
+  .contact-banner-img,
+  .footer-content > .contact-banner-img {
+    min-height: 200px;
+  }
+
+  .right-banner > .about-banner-img {
+    min-height: 180px;
+    background-position: center bottom;
+  }
+
+  .right-content > .mav-content-img {
+    margin-top: 2em;
+    min-height: 300px;
+  }
+
+  .image {
+    min-height: 500px;
+  }
+
+  /* HOME: Did You Know Section */
+  .media-image > .image {
+    border-top-left-radius: var(--size-medium);
+    border-top-right-radius: var(--size-medium);
+    border-bottom-left-radius: 0;
+  }
+  
+  .media > .media-text {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: var(--size-medium);
+    border-bottom-right-radius:  var(--size-medium);
+  }
+
+  /* Flex */
+  .content-fun-fact > .fun-fact,
+  .footer-sub-menu {
+    flex-direction: column;
+    align-items: center;
+    text-align: var(--text-center);
+  }
+
+  /* HOME: Hero Section */
+  .banner-bottom {  
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+   /* HOME: Episode Section */
+  .media { 
+    flex-direction: column;
+  }
+  /* End Flex */
+
+  /* Text Align */
+  h1, h2, h3, h4, h5, h6, p, 
+  .justify, .align-left, .align-right,
+  .nav-list {
+    text-align: var(--text-center);
+  }
+  /* End Text Align */
+
+  /* Grid */
+  .col-9 > .media-item,
+  .col-9 > .contact-item,
+  .col-9 > .profile-item,
+  .col-9 > .footer-menu,
+  .col-9 > .contact-list,
+  .col-9 > .content-item,
+  .col-9 > .content-fun-fact {
+    grid-template-columns: 1fr;
+    gap: 2em;
+  }
+  /* End Grid */
+
+}
+
+/* Tablets (portrait) */
+@media (min-width: 37.5em) and (max-width: 56.19em) {
+
+  .wrapper {
+    width: 100%;
+  }
+
+  .row > [class*="col-"] {
+    flex-shrink: 0;
+    width: 100%;
+  }
+
+  .col-9 {
+    width: 100%;
+  }
+
+  .border {
+    max-width: 90%;
+  }
+
+  .footer-content > .contact-banner-img {
+    min-height: 200px;
+  }
+  
+  .right-banner > .about-banner-img {
+    min-height: 400px;
+    background-position: center bottom;
+  }
+
+  /* Grid */
+  .col-9 > .content-fun-fact,
+  .col-9 > .profile-item,
+  .col-9 > .contact-item {
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+  }
+
+  .col-9 > .media-item,
+  .col-9 > .contact-list {
+    grid-template-columns: 1fr;
+    gap: 1em;
+  }
+  /* End Grid */
+
+}
+
+/* Tablets (landscape) and small desktops */
+@media (min-width: 56.25em) and (max-width: 74.94em) {
+
+  .right-banner > .about-banner-img {
+    min-height: 450px;
+    background-position: center bottom;
+  }
+
+}
+
+/* Desktops and large screens */
+@media (min-width: 75em) {
+
+
+}
