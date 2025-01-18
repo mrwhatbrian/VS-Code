@@ -1,0 +1,964 @@
+/* Device Breakpoint */
+/* @import url('media-queries.css'); */
+
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --light-gray: #d3d3d3;
+  --gray: #6c757d;
+  --dark-gray: #343a40;
+  --lavender-pink: #fae0fb;
+  --purple-amethyst: #a855cb;
+  --purple-plum: #7e3cb2;
+  --orchid: #cc78df;
+  --mauve: #e6a4ef;
+  --purple-indigo: #5b2991;
+  --dark-violet: #1d0848;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --text-center: center;
+  --text-left: left;
+  --text-right: right;
+  --text-justify: justify;
+  --border-thin: 0.0625em;    /* Thin border (1px equivalent) */
+  --border-medium: 0.125em;   /* Medium border (2px equivalent) */
+  --border-thick: 0.25em;     /* Thick border (4px equivalent) */
+  --border-x-thick: 0.375em;  /* Extra thick border (6px equivalent) */
+  --size-small: 0.3125em; /* 5px */
+  --size-medium: 0.625em; /* 10px */
+  --letter-spacing-small: 0.03em;
+  --letter-spacing-medium: 0.05em;
+  --letter-spacing-large: 0.1em;
+  --letter-spacing-xlarge: 0.15em;
+  --base-font-size: 1em;    /* Default font size, equivalent to 16px */
+  --font-size-xs: 0.75em;   /* Extra small (12px) */
+  --font-size-sm: 0.875em;  /* Small (14px) */
+  --font-size-md: 1em;      /* Medium (16px) - default size */
+  --font-size-lg: 1.125em;  /* Large (18px) */
+  --font-size-xl: 1.25em;   /* Extra large (20px) */
+  --font-size-xxl: 1.5em;   /* Double extra large (24px) */
+  --font-size-xxxl: 2em;    /* Triple extra large (32px) */
+  --font-weight-light: 300;     /* Light font weight */
+  --font-weight-normal: 400;    /* Normal font weight */
+  --font-weight-semibold: 500;  /* Semi-bold font weight */
+  --font-weight-bold: 700;      /* Bold font weight */
+  --font-weight-extrabold: 800; /* Extra-bold font weight */
+  --font-weight-black: 900;     /* Black (heaviest) font weight */
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--white);
+  font-family: var(--font-family-sans-serif);
+}
+
+/* HEADER */
+.top-header {
+  min-height: 0.5vh;
+  background-color: var(--purple-indigo);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+nav {
+  width: 100%;
+  background-color: var(--white);
+}
+
+nav > .nav-layout {
+  justify-content: space-between;
+}
+
+.top-left-logo img {
+  vertical-align: middle;
+  width: 95px;
+  height: 70px;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+li a {
+  text-decoration: none;
+  color: var(--purple-indigo);
+}
+
+nav li a:hover {
+  background-color: var(--purple-indigo);
+  color: var(--white);
+  border-radius: var(--size-medium);
+}
+
+/* HAMBURGER MENU */
+.hamburger {
+  display: none;
+  width: 2em;
+  height: 2em;
+  background-color: var(--white);
+  border: var(--border-thin) solid var(--black);
+  border-radius: var(--size-small);
+  padding: 0.3em;
+  z-index: 10;
+}
+
+.hamburger .bar {
+  width: 100%;
+  height: 0.1875em;
+  background-color: var(--black);
+  border-radius: 0.1875em;
+  margin: 0.1875em 0;
+}
+/* END HAMBURGER MENU */
+/* END HEADER*/
+
+/* SECTION PROPERTIES */
+.wrapper {
+  width: 80%;
+  padding: 0 1em;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  padding: 0 1em;
+  margin: 0 auto;
+}
+
+.inline-grid { display: inline-grid; }
+
+.flex { display: flex; }
+.inline-flex { display: inline-flex; }
+
+.temp-video {
+  min-height: 22.5vh;
+  background-color: var(--light-gray);
+  border-radius: var(--size-medium);
+}
+/* END SECTION PROPERTIES */
+
+/* HOME */
+.hero {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(120deg, #6151f9 0%, #f75f9e 100%);
+}
+
+.banner-top h1, .banner-top p {
+  color: #f0f0f0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.media h2, .media p {
+  color: var(--white);
+}
+
+.media-image > .image {
+  border-top-left-radius: var(--size-medium);
+  border-bottom-left-radius: var(--size-medium);
+}
+
+.media > .media-text {
+  border-top-right-radius: var(--size-medium);
+  border-bottom-right-radius:  var(--size-medium);
+}
+
+.dark-blue { background-color: #003366; }
+.deep-green { background-color: #2F4F4F; }
+.burgundy { background-color: #800020; }
+.charcoal-gray { background-color: #333333; }
+.dark-purple { background-color: #5D2D6E; }
+.dark-orange { background-color: #D36C00; }
+
+.media-image > .zoe-zoem {
+  background-image: url("../img/home/zoe-zoem.jpg");
+}
+
+.media-image > .max-blast {
+  background-image: url("../img/home/max-blast.jpg");
+}
+
+.media-image > .sophie-spark {
+  background-image: url("../img/home/sophie-spark.jpg");
+}
+
+.media-image > .professor-quirk {
+  background-image: url("../img/home/professor-quirk.jpg");
+}
+
+.media-image > .sophie-tina {
+  background-image: url("../img/home/sophie-tina.jpg");
+}
+
+.media-image > .tina-twirl {
+  background-image: url("../img/home/tina-twirl.jpg");
+}
+
+.content-fun-fact > .fun-fact {
+  justify-content: flex-start;
+}
+
+.fun-fact-icon > .icon-stars {
+  background-image: url("../img/home/icon/star.png");
+}
+
+.fun-fact-icon > .icon-moon {
+  background-image: url("../img/home/icon/man-on-the-moon.png");
+}
+
+.fun-fact-icon > .icon-planet {
+  background-image: url("../img/home/icon/neptune.png");
+}
+
+.fun-fact-icon > .icon-astronauts {
+  background-image: url("../img/home/icon/astronaut.png");
+}
+
+.fun-fact-icon > .icon-jupiter {
+  background-image: url("../img/home/icon/jupiter.png");
+}
+
+.fun-fact-icon > .icon-earth {
+  background-image: url("../img/home/icon/earth.png");
+}
+
+.fun-fact-icon > .icon-mountain {
+  background-image: url("../img/home/icon/mountain.png");
+}
+
+.fun-fact-icon > .icon-frog {
+  background-image: url("../img/home/icon/frog.png");
+}
+
+.fun-fact-icon > .icon-brain {
+  background-image: url("../img/home/icon/brainstorm.png");
+}
+
+.did-you-know-gif {
+  width: 25em;
+  height: auto; 
+  display: block;
+  margin: 0 auto;
+}
+/* END HOME */
+
+/* ABOUT */
+.about {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  background-image: linear-gradient(120deg, #f75f9e 0, #6151f9 100%);
+  /* border-bottom-right-radius: 100px; */
+}
+
+.about h1, .about h2 {
+  color: #f0f0f0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.right-banner > .about-banner-img {
+  background-image: url("../img/about/banner-3.png");
+  background-color: transparent;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 450px;
+}
+
+.profile {
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.profile-image > .profile-photo {
+  background-image: url("../img/about/icon/user.png");
+  max-width: 250px;
+  max-height: 300px;
+}
+
+.profile-image > .sophie-spark {
+  background-image: url("../img/about/crew/sophie-spark.jpg");
+}
+
+.profile-image > .max-blast {
+  background-image: url("../img/about/crew/max-blast.jpg");
+}
+
+.profile-image > .tina-twirl {
+  background-image: url("../img/about/crew/tina-twirl.jpg");
+}
+
+.profile-image > .zoe-zoom {
+  background-image: url("../img/about/crew/zoe-zoom.jpg");
+}
+
+.profile-image > .professor-quirk {
+  background-image: url("../img/about/crew/professor-quirk.jpg");
+}
+
+.right-content > .mav-content-img {
+  background-image: url("../img/about/mis.jpg");
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  min-height: 100%;
+  border-radius: var(--size-medium);
+  box-shadow: 0em 0.25em 0.5em rgba(0, 0, 0, 0.2);
+}
+
+.fun-science-fact {
+  background-color: #f4ede4;
+}
+
+.fun-fact-icon > .icon-lightning {
+  background-image: url("../img/about/icon/thunderstorm-sun.png");
+}
+
+.fun-fact-icon > .icon-ocean {
+  background-image: url("../img/about/icon/landscape.png");
+}
+
+.fun-fact-icon > .icon-chemistry {
+  background-image: url("../img/about/icon/flamingo.png");
+}
+
+.fun-fact-icon > .icon-venus {
+  background-image: url("../img/about/icon/venus.png");
+}
+
+.fun-fact-icon > .icon-octopus {
+  background-image: url("../img/about/icon/smiling.png");
+}
+
+.fun-fact-icon > .icon-physics {
+  background-image: url("../img/about/icon/boiling.png");
+}
+
+.fun-fact-icon > .icon-body {
+  background-image: url("../img/about/icon/iron.png");
+}
+
+.fun-fact-icon > .icon-plane {
+  background-image: url("../img/about/icon/water-rocket.png");
+}
+
+.fun-fact-icon > .icon-cow {
+  background-image: url("../img/about/icon/cow.png");
+}
+
+.join {
+  background-color: var(--purple-indigo);
+  clip-path: ellipse(80% 100% at top);
+}
+
+.slogan > h1 {
+  color: #f0f0f0;
+}
+/* END ABOUT PAGE */
+
+/* CONTACT PAGE */
+.contact {
+  background-color: var(--lavender-pink);
+}
+
+.contact-banner-img {
+  background-image: url("../img/contact/banner-1.png");
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 400px;
+}
+
+.contact-banner-img2 {
+  background-image: url("../img/contact/banner-2.png");
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 400px;
+}
+
+.contact form {
+  background-color: var(--white);
+  border-top: var(--size-small) solid var(--purple-indigo);
+  border-radius: var(--size-medium);
+}
+
+label {
+  display: block;
+  text-align: var(--text-left);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-normal);
+  margin-bottom: 0.2em;
+}
+
+input[type="text"], input[type="tel"], input[type="email"], textarea {
+  width: 100%;
+  padding: 0.375em 0.75em;
+}
+
+.contact-info {
+  border-right: var(--size-small) solid var(--purple-indigo);
+  border-radius: var(--size-medium);
+}
+
+.contact-info img {
+  width: 100px;
+  height: auto;
+}
+
+.contact-info h3 {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-md);
+}
+
+.contact-info h4 {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  color: var(--dark-gray);
+}
+
+.contact-info p {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-light);
+}
+/* END CONTACT PAGE*/
+
+/* FOOTER */
+.nav-list,
+.footer-links {
+  flex-direction: column;
+}
+
+.footer-links {
+  justify-content: var(--text-center);
+}
+
+.footer-sub-menu {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: var(--font-size-xs);
+}
+
+.nav-legal-list li {
+  margin-right: 20px;
+}
+
+.footer-links li a:hover {
+  color: var(--purple-indigo);
+}
+
+.nav-list li a,
+.nav-legal-list li a,
+.legal-text p {
+  color: var(--gray);
+}
+/* END FOOTER */
+
+/* MARGIN */
+.mx-auto { margin: 0 auto;}
+
+.m-0 { margin: 0; }
+.m-1 { margin: 0.25em; }
+.m-2 { margin: 0.5em; }
+.m-3 { margin: 1em; }
+.m-4 { margin: 1.5em; }
+.m-5 { margin: 3em; }
+.m-auto { margin: auto; }
+
+.mt-0 { margin-top: 0; }
+.mt-1 { margin-top: 0.25em; }
+.mt-2 { margin-top: 0.5em; }
+.mt-3 { margin-top: 1em; }
+.mt-4 { margin-top: 1.5em; }
+.mt-5 { margin-top: 3em; }
+.mt-auto { margin-top: auto; }
+
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: 0.25em; }
+.mb-2 { margin-bottom: 0.5em; }
+.mb-3 { margin-bottom: 1em; }
+.mb-4 { margin-bottom: 1.5em; }
+.mb-5 { margin-bottom: 3em; }
+.mb-auto { margin-bottom: auto; }
+/* END MARGIN */
+
+/* PADDING */
+.py-lg-5 {
+  padding-top: 3em !important;
+  padding-bottom: 3em !important;
+}
+
+.py-lg-1 {
+  padding-top: 1.5em !important;
+  padding-bottom: 1.5em !important;
+}
+.px-lg-5 {
+  padding-right: 3em;
+  padding-left: 3em;
+}
+
+.p-0 { padding: 0; }
+.p-1 { padding: 0.25em; }
+.p-2 { padding: 0.5em; }
+.p-3 { padding: 1em; }
+.p-4 { padding: 1.5em; }
+.p-5 { padding: 3em; }
+/* END PADDING */
+
+/* COLUMN */
+.col-auto { width: auto; }
+.col-1 { width: 8.33%; }
+.col-2 { width: 16.66%; }
+.col-3 { width: 25%; }
+.col-4 { width: 33.33%; }
+.col-5 { width: 41.66%; }
+.col-6 { width: 50%; }
+.col-7 { width: 58.33%; }
+.col-8 { width: 66.66%; }
+.col-9 { width: 75%; }
+.col-10 { width: 83.33%; }
+.col-11 { width: 91.66%; }
+.col-12 { width: 100%; }
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row > [class*="col-"] {
+  padding-right: 1em;
+  padding-left: 1em;
+  text-align: var(--text-center);
+}
+
+.align-flex-center{
+  align-items: center;
+}
+/* END COLUMN */
+
+/* Standard Box Shadow - Applies to cards, buttons, and images */
+.box-shadow {
+  box-shadow: 0em 0.25em 0.5em rgba(0, 0, 0, 0.2);
+}
+
+/* Style for the active link (currently selected) */
+.active {
+  background-color: var(--purple-indigo);
+  color: var(--white);
+  border-radius: var(--size-medium);
+}
+
+/* Style for Alignment */
+.align-left { text-align: var(--text-left); }
+.align-right { text-align: var(--text-right); }
+.center { text-align: var(--text-center); }
+.justify { text-align: var(--text-justify); }
+
+/* Style for Headings, Paragraph, Borders */
+h1 {
+  font-weight: var(--font-weight-bold);
+  font-size: 2.5em;
+}
+
+h3, h6 {
+  font-weight: var(--font-weight-normal);
+  font-size: var(--font-size-sm);
+}
+
+h3 {
+  font-size: var(--font-size-md);
+  line-height: 1.2;
+}
+
+h6 {
+  font-style: italic;
+  text-align: var(--text-justify);
+}
+
+p {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-light);
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  color: var(--black);
+}
+
+.border {
+  border-bottom: var(--border-thin) solid var(--light-gray);
+  max-width: 73%;
+}
+
+.border-body {
+  border-bottom: var(--border-thin) solid var(--deep-blue);
+  max-width: 73%;
+}
+
+/* Style for Button */
+.button {
+  background-color: var(--white);
+  color: var(--purple-indigo);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: var(--base-font-size);
+  letter-spacing: var(--letter-spacing-xlarge);
+  border: var(--border-thin) solid var(--purple-indigo);
+  border-radius: var(--size-medium);
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--purple-indigo);
+  color: var(--white);
+}
+
+/* Style for Icon and Image */
+.icon {
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  margin-right: var(--size-medium);
+}
+
+.image {
+  background-color: transparent;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 300px;
+  min-height: 400px;
+}
+.insect-image {
+  background-color: transparent;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 300px;
+  min-height: 400px;
+}
+/* Grid */
+.grid { display: grid; }
+
+.col-9 > .footer-menu,
+.col-9 > .contact-list {
+  grid-template-columns: 2fr 1fr;
+  gap: 1em;
+}
+
+.col-9 > .media-item {
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  padding: var(--size-medium);
+}
+
+.col-9 > .content-fun-fact,
+.col-9 > .profile-item,
+.col-9 > .contact-item  {
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1em;
+}
+
+/* The Universe */
+.col-9 > .content-item {
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  padding: var(--size-medium);
+}
+
+.col-9 > .content-stars-item,
+.col-9 > .content-hero-item,
+.col-9 > .galaxy-item {
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1em;
+}
+
+.the-universe {
+  background-image: linear-gradient(to bottom, #0D0D1A, #1B1F3B, #3B4D61);
+}
+
+.the-universe h1, 
+.the-universe h4, 
+.the-universe p {
+  color: #ffffff;
+}
+
+.cosmic-yellow { color: #FFD700; }
+.electric-blue { color: #00FFFF; }
+.starlight-purple { color: #BA55D3; }
+.soft-blue { color: #4DA1C2; }
+.earthy-green { color: #4CAF50; }
+.golden-yellow { color: #FCAC00; }
+.white-text { color: #ffffff; }
+.skin-tone { color: #F5C6A5; }
+.vibrant-red { color: #E63946; }
+.dark-red { color: #9B2226; }
+.off-white { color: #FAF3E0; }
+.medium-brown { color: #6A4E3F; }
+.light-gray { color: #A8A8A8; }
+.royal-purple { color: #800080; }
+.robin-blue { color: #57C4E5; }
+.deep-blue { color: #050555; }
+.bright-green { color: #88D498; }
+.red-giants { color: #E94242; }
+.supernova { color: #F5A623; }
+.hypernova { color: #FCAC00; }
+
+.bright-red { background-color: #E94242;}
+.bright-gy { background-color: #FCAC00;}
+.bright-harmony { background-color: #FCCE3E;}
+.bright-cool { background-color: #4DA1C2;}
+.bright-rich-blue { background-color: #275B70;}
+.starlight-purple-bg { background-color: #BA55D3;}
+.pink-bg { background-color: #ffc0cb;}
+.off-white-bg {background-color: #c6c6c6;}
+
+
+
+.the-universe .footer-links li a:hover {
+  color: #00ffff;
+}
+
+.the-universe .nav-list li a,
+.the-universe .nav-legal-list li a,
+.the-universe .legal-text p {
+  color: #d3d3d3;
+}
+
+.theory-phases > .phases {
+  align-items: center;
+}
+
+.theory-phases h2 {
+  border-radius: var(--size-medium);
+  margin-right: 20px;
+}
+
+/* Images */
+.big-bang-img {
+  background-image: url("../img/universe/big-bang.png");
+}
+
+.solar-system-img {
+  background-image: url("../img/universe/solar-system.png");
+  min-height: 550px;
+}
+
+.life-cycle-of-stars {
+  background-image: url("../img/universe/life-cycle-of-stars.png");
+  min-height: 500px;
+}
+
+.solar-wind {
+  background-image: url("../img/universe/solar-wind.jpg");
+}
+
+.galaxy-img {
+  background-image: url("../img/universe/galaxy-1.png");
+  min-height: 500px;
+}
+
+.spiral-img {
+  background-image: url("../img/universe/spiral.png");
+}
+
+.elliptical-img {
+  background-image: url("../img/universe/elliptical.png");
+}
+
+.irregular-img {
+  background-image: url("../img/universe/irregular.png");
+}
+
+.milky-way-img {
+  background-image: url("../img/universe/milky-way.png");
+  min-height: 700px;
+}
+
+.planets-img {
+  background-image: url("../img/universe/planets.png");
+  min-height: 700px;
+}
+
+.moons-img {
+  background-image: url("../img/universe/moons-phases.png");
+}
+
+/* .space-img {
+  background-image: url("../img/universe/space.png");
+}
+
+.astronaut-img {
+  background-image: url("../img/universe/astronaut.png");
+} */
+
+.hero-img {
+  background-image: url("../img/universe/space.png");
+
+}
+
+/* The Human Body */
+
+.body-hero-img {
+  background-image: url("../img/body/body-hero.png");
+
+}
+.the-body {  
+  background-image: linear-gradient(to bottom, #a8d5ef, #b2d7ea, #deecf5);
+}
+
+.the-body h1, 
+.the-body h4, 
+.the-body p {
+  color: #000000;
+}
+
+.body-cells > .cells {
+  align-items: center;
+}
+
+.body-cells h2 {
+  border-radius: var(--size-medium);
+  margin-right: 20px;
+}
+
+.body-text ul li{  
+  margin: .25em auto;
+  width: 80%;
+  list-style:circle;
+  font-weight: var(--font-weight-light);
+}
+
+.the-body .footer-links li a:hover {
+  color: #00ffff;
+}
+
+.the-body .nav-list li a,
+.the-body .nav-legal-list li a,
+.the-body .legal-text p {
+  color: #000000;
+}
+/* div.body-image {
+  max-width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+} */
+
+/* Body Images */
+.image-body {
+  max-width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.the-body ul{
+  font-weight: bolder;
+}
+
+.the-body ul a{
+  font-weight: lighter;
+}
+
+.body-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.body-row > [class*="col-"] {
+  padding-right: 1em;
+  padding-left: 1em;
+  text-align: var(--text-center);
+}
+
+
+.body-hero-img {background-image: url("../img/body/body-hero.png"); min-height: 25em;}
+.body-cells {background-image: url("../img/body/body-cells.png"); min-height: 15em;}
+.body-tissues {background-image: url("../img/body/body-tissues.png"); min-height: 15em;}
+.body-organs {background-image: url("../img/body/body-organs.png"); min-height: 25em;}
+.body-skeleton {background-image: url("../img/body/body-skeleton.png"); min-height: 25em;}
+.body-muscular-system {background-image: url("../img/body/body-muscular-system.png"); min-height: 25em;}
+.body-circulatory-system {background-image: url("../img/body/body-circulatory-system.png"); min-height: 25em;}
+.body-respiratory-system {background-image: url("../img/body/body-respiratory-system.png"); min-height: 15em;}
+.body-digestive-system {background-image: url("../img/body/body-digestive-system.png"); min-height: 15em;}
+.body-nervous-system {background-image: url("../img/body/body-nervous-system.png"); min-height: 15em;}
+.body-urinary-system {background-image: url("../img/body/body-urinary-system.png"); min-height: 15em;}
+.body-lymphatic {background-image: url("../img/body/body-lymphatic.png"); min-height: 25em;}
+.body-endocrine {background-image: url("../img/body/body-endocrine.png"); min-height: 15em;}
+.body-reproductive {background-image: url("../img/body/body-reproductive.png"); min-height: 15em;}
+.body-hand-trace {background-image: url("../img/body/body-hand-trace.png"); min-height: 20em;}
+
+.body-text ol li{
+  font-weight: var(--font-weight-light);
+}
+.body-part-art-list {
+  font-weight: var(--font-weight-light);
+  list-style-type: lower-alpha;
+  margin-left: 1em;
+  padding-left: 1em;
+}
+
+/* Dropdown menu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  margin: 1em auto;
+  background-color: var(--white);
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 0;
+  list-style: none;
+  z-index: 1000;
+}
+
+/* Dropdown menu items */
+.dropdown-menu li {
+  border-bottom: 1px solid #ddd;
+}
+
+.dropdown-menu li:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu li a {
+ 
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-menu li a:hover {
+  background-color: var(--purple-indigo);
+}
+
+/* Show dropdown menu on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}

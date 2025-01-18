@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shiny Science - Contact Us</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/media-queries.css">
+  </head>
+  <body>
+    <div class="top-header"></div>
+    <header>
+      <nav class="box-shadow p-2">
+        <div class="wrapper nav-layout">
+          <div class="top-left-logo">
+            <a href="index.html"><img src="img/logo-2.png" alt="Logo"></a>
+          </div>
+
+          <!-- Hamburger Icon -->
+          <div class="hamburger" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+
+          <ul id="nav-list">
+            <li><a class="p-3" href="index.html">Home</a></li>
+            <li><a class="p-3" href="about.html">About</a></li>
+            <li class="dropdown">
+              <a class="p-3" href="#">Explore</a>
+              <ul class="dropdown-menu">
+                <li><a href="universe.html">The Universe</a></li>
+                <li><a href="body.html">Human Body</a></li>
+                <li><a href="insects.html">Insects</a></li>                
+              </ul>
+            </li>
+            <li><a class="p-3 active" href="contact.html">Contact Us</a></li>            
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="contact box-shadow">
+          <div class="container">
+            <div class="row py-lg-5">
+              <div class="col-9 mx-auto">
+                <div class="contact-list grid">
+                  <div class="left-banner">
+                    <h1>Get In Touch with Shiny Science Squad!</h1>
+                    <p class="mt-2">
+                      We’d love to hear from you!
+                      Whether you have  a question, suggestion,
+                      or just want to sat “hello,” 
+                      feel free to get in touch
+                    </p>
+                    <div class="contact-banner-img2 mt-3"></div>
+                  </div>
+                  <div class="right-banner">
+                    <form action="formSubmission.html" method="GET" class="box-shadow p-3 m-auto">
+                      <label for="name">Name</label>
+                      <input type="text" id="name" name="name" required placeholder="e.g. Mike Jedi"><br><br>
+              
+                      <label for="phone">Phone Number</label>
+                      <input type="tel" id="phone" name="phone" required placeholder="506-123-4567"><br><br>
+              
+                      <label for="email">Email</label>
+                      <input type="email" id="email" name="email" required placeholder="mjedi@cartoon.com"><br><br>
+              
+                      <label for="message">Message</label>
+                      <textarea id="message" name="message" rows="4" cols="50" required placeholder="Say Hi to the Shiny Science Team!"></textarea>
+                      <br>
+                      <br>
+      
+                      <button class="button p-3" type="submit">Send Message</button>
+                    </form>
+                    <h6 class="mt-3">
+                      By sending us a message, you’re agreeing that we might 
+                      get back to you with fun science tips, news, and updates about the show. 
+                      Don't worry – we’ll keep your info safe and only use it to chat about 
+                      cool science things!
+                    </h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-information">
+        <div class="container">
+          <div class="row py-lg-5">
+            <div class="col-9 mx-auto">
+              <div class="contact-item grid align-left">
+
+                <div class="contact-info box-shadow p-3">
+                  <div class="contact-top flex">
+                    <img src="img/contact/sticker icon/science.png" alt="Science">
+                    <div class="contact-body p-4">
+                      <h3>Email Us</h3>
+                      <h4>info@shinyscience.com</h4>
+                    </div>
+                  </div>
+                  
+                  <div class="contact-bottom">
+                    <h4 class="content-headline mt-3">Space smells like seared steak.</h4>
+                    <p class="content">
+                      Astronauts report that the scent of space (on their suits or equipment) 
+                      has a "meaty" aroma, possibly due to dying stars emitting hydrocarbons.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="contact-info box-shadow p-3">
+                  <div class="contact-top flex">
+                    <img src="img/contact/sticker icon/science-2.png" alt="Science">
+                    <div class="contact-body p-4">
+                      <h3>Call</h3>
+                      <h4>(506) 000 0000</h4>
+                    </div>
+                  </div>
+                  
+                  <div class="contact-bottom">
+                    <h4 class="content-headline mt-3">Jellyfish are older than dinosaurs!</h4>
+                    <p class="content">
+                      Jellyfish have been floating through Earth’s oceans for over 500 million years, 
+                      predating the first dinosaurs by about 250 million years.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="contact-info box-shadow p-3">
+                  <div class="contact-top flex">
+                    <img src="img/contact/sticker icon/globe.png" alt="Globe">
+                    <div class="contact-body p-4">
+                      <h3>Send a Letter</h3>
+                      <h4>Moncton, NB E1C 0K8</h4>
+                    </div>
+                  </div>
+                  
+                  <div class="contact-bottom">
+                    <h4 class="content-headline mt-3">Sharks existed before trees!</h4>
+                    <p class="content">
+                      Sharks have been around for over 400 million years, 
+                      while the earliest trees appeared around 350 million years ago.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="border mx-auto"></div>
+    </main>
+
+    <footer class="shiny-science-footer">
+      <section>
+        <div class="container">
+          <div class="py-lg-5">
+            <div class="col-9 px-lg-5 mx-auto">
+              <div class="footer-menu grid">
+                <div class="footer-content">
+                  
+                  <div class="contact-banner-img"></div>
+                  <p class="mt-3 justify">
+                    <b>Shiny Science TV</b> is here to generate excitement about science in children across the Globe.
+                    Our content is designed for learning and exploration, aimed at young scientists everywhere.
+                    By using Shiny Science, you agree to our terms of use and acknowledge our privacy policy and cookie usage.
+                  </p>
+                </div>
+                
+                <div class="footer-links mx-auto flex">
+                  <h4>QUICK LINKS</h4>
+                  <ul class="nav-list flex mt-3">
+                    <li class="mb-3"><a href="insects.html">Insects</a></li>
+                    <li class="mb-3"><a href="body.html">The Human Body</a></li>
+                    <li class="mb-3"><a href="universe.html">The Universe</a></li>
+                    <li class="mb-3"><a href="about.html">About</a></li>
+                    <li class="mb-3"><a href="about.html#crew">Meet the Crew</a></li>               
+                    <li class="mb-3"><a href="about.html">Contact Us</a></li>
+                    <li><a href="about.html#team">The Team</a></li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="border mx-auto"></div>
+
+      <section>
+        <div class="container">
+          <div class="py-lg-5">
+            <div class="col-9 px-lg-5 mx-auto">
+              <div class="footer-sub-menu flex">
+
+                <div class="footer-links">
+                  <ul class="nav-legal-list">
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                  </ul>
+                </div>
+                
+
+                <div class="legal-text align-right">
+                  <p>
+                    Copyright &copy; 2024 Shiny Science TV Show. All Rights Reserved.
+                  </p>
+                  <p>
+                     Powered by Imagination and Science!
+                  </p>
+                </div>
+              
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+
+    <script>
+      // Function to toggle the visibility of the menu with dropdown effect
+      function toggleMenu() {
+        var navList = document.getElementById('nav-list');
+        navList.classList.toggle('show');
+      }
+    </script>
+  </body>
+</html>
