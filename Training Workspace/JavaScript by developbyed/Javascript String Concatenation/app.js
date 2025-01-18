@@ -29,3 +29,5 @@ console.log(seperateLine);
   typeof is an operator used to determine the type of a given operand (variable, value, or expression).
   It returns a string representing the type of the operand.
 */
+
+console.log(typeof whoami);
