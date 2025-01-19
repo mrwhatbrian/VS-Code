@@ -1,0 +1,72 @@
+<!-- HTML JavaScript -->
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>HTML Javascript</title>
+	</head>
+
+	<body>
+		
+		<h2>JavaScript - Change Content</h2>
+		<p id="demo_content">Hello World!</p>
+
+		<button tpye="button" onclick="content_function()">Change Content</button>
+
+		<hr>
+
+		<h2>JavaScript - Change Styles</h2>
+		<p id="demo_styles">Click Button for Example</p>
+
+		<button type="button" onclick="myFunction()">Change Styles</button>
+
+		<hr>
+
+		<h2>JavaScript = Change Attributes</h2>
+		<img id="demo_attribute" src="Images/pic_bulboff.gif" width="100" height="180">
+		<p>
+			<button type="button" onclick="light(1)">On</button>
+			<button type="button" onclick="light(0)">Off</button>			
+		</p>
+
+		<script type="text/javascript">
+			function content_function() {
+				document.getElementById("demo_content").innerHTML = "Hello JavaScript!";
+			}
+			function myFunction() {
+				document.getElementById("demo_styles").innerHTML = "CSS Styles by JavaScript";
+				document.getElementById("demo_styles").style.fontSize = "40px";
+				document.getElementById("demo_styles").style.textAlign = "center";
+				document.getElementById("demo_styles").style.color = "#8F2D56";
+				document.getElementById("demo_styles").style.backgroundColor = "#FFC857";
+				document.getElementById("demo_styles").style.padding = "20px";
+				document.getElementById("demo_styles").style.margin = "20px";
+			}
+			function light(sw) {
+				var pic;
+				if (sw == 0) {
+					pic = "Images/pic_bulboff.gif";
+				} else {
+					pic = "Images/pic_bulbon.gif"
+				}
+				document.getElementById("demo_attribute").src = pic;
+			}
+		</script>
+
+		<!-- 
+
+			Own Script for Change Attribute
+
+			function light(sw) {
+				if (sw == 1) {
+					document.getElementById("demo_attribute").src = "Images/pic_bulbon.gif";
+				} else {
+					document.getElementById("demo_attribute").src = "Images/pic_bulboff.gif";
+				}
+			}
+
+		-->	
+
+	</body>
+</html>

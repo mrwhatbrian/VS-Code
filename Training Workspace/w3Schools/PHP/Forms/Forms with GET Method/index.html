@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="HTML, CSS, JavaScript, PHP">
+    <meta name="description" content="Form Data">
+    <meta name="author" content="BCABELLO-MYNBCC">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <form action="process.php" method="GET">
+      <fieldset>
+        <legend>Form:</legend>
+        <label for="first-name">First Name</label>
+        <br>
+        <input type="text" id="first-name" name="first-name" required>
+        <br>
+        <label for="last-name">Last Name</label>
+        <br>
+        <input type="last-name" id="last-name" name="last-name" required>
+        <br>
+        <label for="gender">Gender</label>
+        <br>
+        <input type="radio" id="gender-male" name="gender" value="Male" required>
+        <label for="gender-male">Male</label>
+        <input type="radio" id="gender-female" name="gender" value="Female" required>
+        <label for="gender-female">Female</label>
+        <input type="radio" id="gender-other" name="gender" value="Other" required>
+        <label for="gender-other">Other</label>
+        <br>
+        <label for="date-of-birth">Date of Birth</label>
+        <br>
+        <input type="date" id="date-of-birth" name="date-of-birth" required>
+        <br>
+        <label for="email">Email</label>
+        <br>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="phone-number">Phone Number</label>
+        <br>
+        <input type="tel" id="phone-number" name="phone-number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+        <br>
+        <label for="username">Username</label>
+        <br>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <label for="password">Password</label>
+        <br>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <label for="confirm-password">Confirm Password</label>
+        <br>
+        <input type="password" id="confirm-password" name="confirm-password" required>
+        <br><br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+      </fieldset>
+      
+    </form>
+
+  </body>
+</html>

@@ -1,0 +1,84 @@
+<!-- HTML Table Styling -->
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+	<head>
+		<title>HTML Table Styling</title>
+		<style type="text/css">
+			h2 {
+				margin-bottom: 0px;
+				color: #084C61;
+			}
+			caption {
+				text-align: left;
+			}
+			table {
+				width: 100%;
+				text-align: left;
+			}
+			table, th, td {
+				border: 1px solid black;
+				border-collapse: collapse;
+				padding: 15px;
+				
+			}
+			tr:nth-child(even) {
+				background-color: #DCDCDC;
+			}
+			.ver_strips td:nth-child(even), .ver_strips th:nth-child(even) {
+				background-color: #DCDCDC;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<h2>Zebra Strips</h2>
+		<table>
+			<caption>Style: nth-child(even)</caption>
+			<tr>
+				<th>Name</th>
+				<th>Age</th>
+			</tr>
+			<tr>
+				<td>Emily Willis</td>
+				<td>25</td>
+			</tr>
+			<tr>
+				<td>Eva Elfie</td>
+				<td>23</td>
+			</tr>
+			<tr>
+				<td>Alina Li</td>
+				<td>30</td>
+			</tr>
+		</table>
+
+		<h2>Vertical Strips</h2>
+		<table class="ver_strips">
+			<caption>Style: nth-child(even)</caption>
+			<tr>
+				<th>Name</th>
+				<th>Age</th>
+				<th>Occupation</th>
+			</tr>
+			<tr>
+				<td>Emily Willis</td>
+				<td>25</td>
+				<td>American Pornographic Actress</td>
+			</tr>
+			<tr>
+				<td>Eva Elfie</td>
+				<td>23</td>
+				<td>Russian Pornographic Actress</td>
+			</tr>
+			<tr>
+				<td>Alina Li</td>
+				<td>30</td>
+				<td>American Pornographic Actress</td>
+			</tr>
+		</table>
+
+	</body>
+</html>

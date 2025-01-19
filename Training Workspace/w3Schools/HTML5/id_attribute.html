@@ -1,0 +1,50 @@
+<!-- HTML id Attribute -->
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>HTML id Attribute</title>
+		<style type="text/css">
+			/* Style the element with the id "myHeader" */
+			#myHeader {
+				background-color: #73D2DE;
+				color: #000000;
+				padding: 40px;
+				text-align: center;
+			}
+
+			/* Style all elements with the class name "city" */
+			.city {
+				background-color: #8F2D56;
+				color: #FFFFFF;
+				padding: 10px;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<!-- An element with a unique id -->
+		<h1 id="myHeader">My Cities</h1>
+		<button onclick="displayResult()">Change text</button>
+
+		<!-- Multiple elements with same class -->
+		<h2 class="city">London</h2>
+		<p>London is the capital of England.</p>
+
+		<h2 class="city">Paris</h2>
+		<p>Paris is the capital of France.</p>
+
+		<h2 class="city">Tokyo</h2>
+		<p>Tokyo is the capital of Japan.</p>
+
+		<!-- JavaScript -->
+		<script>
+			function displayResult() {
+				document.getElementById("myHeader").innerHTML = "Our City!";
+			}
+		</script>
+
+	</body>
+</html>
