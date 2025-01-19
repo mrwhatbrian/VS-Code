@@ -45,9 +45,9 @@ console.log(
   `${person.firstName} ${person.secondName} is ${person.age} months old.`
 );
 
-console.log("\n----------------------------");
+console.log("\n---------------------");
 console.log(`Using the new Keyword`);
-console.log("----------------------------\n");
+console.log("---------------------\n");
 
 const alexa = new Object();
 
@@ -59,17 +59,38 @@ console.log(
   `${alexa["name"]} is ${alexa["age"]} and she has ${alexa["eyeColor"]} eyes.`
 );
 
-console.log("\n----------------------------");
+console.log("\n-------------------------");
 console.log(`JavaScript Object Methods`);
-console.log("----------------------------\n");
+console.log("-------------------------\n");
 
 const info = {
   firstName: "Lil",
   secondName: "Siri",
   id: 5566,
-  fullName() {
+  fullName: function () {
     return this.firstName + " " + this.secondName;
   },
 };
 
 console.log(info.fullName());
+
+console.log("\n------------------------------");
+console.log(`JavaScript Objects are Mutable`);
+console.log("------------------------------\n");
+
+//Create an Object
+const sample = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  eyeColor: "blue",
+};
+
+// Create a copy
+const x = sample;
+
+// Change Age in both
+x.age = 10;
+
+console.log(`${sample.firstName} is ${sample.age} years old.`);
+console.log();
