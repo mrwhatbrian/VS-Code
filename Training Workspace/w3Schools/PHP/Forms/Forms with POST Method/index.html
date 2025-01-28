@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="HTML, CSS, JavaScript, PHP">
+    <meta name="description" content="Form Data">
+    <meta name="author" content="BCABELLO-MYNBCC">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>
+  </head>
+  <body>
+
+    <main class="container mt-5 mb-5">
+      <section class="p-5">
+
+        <form action="process.php" method="POST" class="row g-3" onsubmit="return validateForm()" novalidate>
+
+          <div class="row mb-2">
+            <div class="col-md-6 mb-2">
+              <label for="first-name" class="form-label">First Name</label>
+              <input type="text" id="first-name" name="first-name" pattern="[A-Za-z]+" minlength="2" maxlength="50" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+              <label for="last-name" class="form-label">Last Name</label>
+              <input type="text" id="last-name" name="last-name" pattern="[A-Za-z]+" minlength="2" maxlength="50" class="form-control" required>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="row">
+                <label for="gender" class="form-label">Gender</label>
+              </div>
+              <div class="row">
+                <div class="col-md-auto mb-2">
+                  <div class="form-check form-check-inline">
+                    <input type="radio" id="gender-male" name="gender" value="Male" class="form-check-input" required>
+                    <label for="gender-male" class="form-check-label">Male</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input type="radio" id="gender-female" name="gender" value="Female" class="form-check-input" required>
+                    <label for="gender-female" class="form-check-label">Female</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input type="radio" id="gender-other" name="gender" value="Other" class="form-check-input" required>
+                    <label for="gender-other" class="form-check-label">Other</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-6">
+              <div class="row">
+                <label for="date-of-birth" class="form-label">Date of Birth</label>
+              </div>
+              <div class="row">
+                <div class="col-md-4 mb-2">
+                  <select id="month" name="month" onchange="updateDays()" class="form-select" required>
+                    <option value="" selected>Month</option>
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                  </select>
+                </div>
+                <div class="col-md-4 mb-2">
+                  <select id="day" name="day" class="form-select" required>
+                    <option value="" selected>Day</option>
+                    <!-- Days from 1 to 31 -->
+                    <script>
+                      for (let i = 1; i <= 31; i++) {
+                          document.write("<option value=\"" + i + "\">" + i + "</option>");
+                      }
+                  </script>
+                  </select>
+                </div>
+                <div class="col-md-4 mb-2">
+                  <select id="year" name="year" onchange="updateDays()" class="form-select" required>
+                    <option value="" selected>Year</option>
+                    <!-- Years from 1900 to current year -->
+                    <script>
+                      const currentYear = new Date().getFullYear();
+                      for (let i = currentYear; i >= 1900; i--) {
+                          document.write("<option value=\"" + i + "\">" + i + "</option>");
+                      }
+                    </script>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 mb-2">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" placeholder="name@example.com" minlength="5" maxlength="254" class="form-control" required>
+              <div class="invalid-feedback">Please enter a valid email address.</div>
+            </div>
+            
+            <div class="col-md-6 mb-2">
+              <label for="phone-number" class="form-label">Phone Number</label>
+              <input type="tel" id="phone-number" name="phone-number" pattern="\([0-9]{3}\) [0-9]{3}-[0-9]{4}" placeholder="(000) 000-0000" maxlength="14" oninput="formatPhoneNumber(this)" class="form-control" required>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-auto">
+              <label for="address" class="form-label">Address</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 mb-2">
+              <input type="text" id="street-name" name="street-name" placeholder="1234 Main St" minlength="5" maxlength="100" class="form-control" required>
+            </div>
+            <div class="col-md-6 mb-2">
+              <input type="text" id="unit" name="unit" placeholder="Apartment, suite, or floor" maxlength="100" class="form-control">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 mb-2">
+              <input id="city" name="city" placeholder="City" minlength="2" maxlength="50" class="form-control" required>
+            </div>
+            <div class="col-md-3 mb-2">
+              <select id="province" name="province" class="form-select" required>
+                <option value="" selected>Province</option>
+                <option value="AB">Alberta</option>
+                <option value="BC">British Columbia</option>
+                <option value="MB">Manitoba</option>
+                <option value="NB">New Brunswick</option>
+                <option value="NL">Newfoundland and Labrador</option>
+                <option value="NS">Nova Scotia</option>
+                <option value="ON">Ontario</option>
+                <option value="PE">Prince Edward Island</option>
+                <option value="QC">Quebec</option>
+                <option value="SK">Saskatchewan</option>
+                <option value="YT">Yukon</option>
+                <option value="NT">Northwest Territories</option>
+                <option value="NU">Nunavut</option>
+              </select>
+            </div>
+            <div class="col-md-3 mb-2">
+              <input id="postal-code" name="postal-code" placeholder="Postal Code" maxlength="7" oninput="formatPostalCode(this)" class="form-control" required>
+            </div>
+          </div>
+            
+          <div class="row mb-2">
+            <div class="col-md-4 mb-2">
+              <label for="username" class="form-label">Username</label>
+              <input type="text" id="username" name="username" minlength="3" maxlength="30" class="form-control" required>
+              <div class="invalid-feedback">Please enter a valid username.</div>
+            </div>
+            <div class="col-md-4 mb-2">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" id="password" name="password" placeholder="Must be 8-20 characters long" minlength="8" maxlength="20" class="form-control" required>
+              <div class="invalid-feedback">Password is required.</div>
+            </div>
+  
+            <div class="col-md-4 mb-2">
+              <label for="confirm-password" class="form-label">Confirm Password</label>
+              <input type="password" id="confirm-password" name="confirm-password" minlength="8" maxlength="20" class="form-control" required>
+              <div class="invalid-feedback">Passwords do not match.</div>
+            </div>
+          </div>
+          
+          <div class="row mb-2">
+            <div class="col-md-auto">
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="reset" class="btn btn-danger">Reset</button> 
+            </div>
+          </div>
+
+        </form>
+
+        <script>
+          function updateDays() {
+            const month = document.getElementById("month").value;
+            const year = document.getElementById("year").value;
+            const daySelect = document.getElementById("day");
+            const selectedDay = daySelect.value;
+
+            daySelect.innerHTML = "<option value=\"\">Day</option>"; // Reset days
+
+            if (month) {
+                let daysInMonth;
+
+                if (month === "2") { // February
+                    if (year) {
+                        // Check for leap year
+                        const isLeapYear = (year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0));
+                        daysInMonth = isLeapYear ? 29 : 28;
+                    } else {
+                        daysInMonth = 28; // Default to non-leap year if no year is selected
+                    }
+                } else if (["4", "6", "9", "11"].includes(month)) { // April, June, September, November
+                    daysInMonth = 30;
+                } else { // January, March, May, July, August, October, December
+                    daysInMonth = 31;
+                }
+
+                for (let i = 1; i <= daysInMonth; i++) {
+                    daySelect.innerHTML += "<option value=\"" + i + "\">" + i + "</option>";
+                }
+
+                // Check if the currently selected day is valid for the new month/year
+                if (selectedDay && (selectedDay > daysInMonth)) {
+                    daySelect.value = ""; // Reset to default if selected day is invalid
+                } else if (selectedDay) {
+                    daySelect.value = selectedDay; // Retain the selected day if it's valid
+                }
+            }
+          }
+
+          function formatPhoneNumber(input) {
+            const value = input.value.replace(/\D/g, "");
+            let formatted = "";
+
+            if (value.length > 0) {
+                formatted += "(" + value.substring(0, 3);
+            }
+            if (value.length > 3) {
+                formatted += ") " + value.substring(3, 6);
+            }
+            if (value.length > 6) {
+                formatted += "-" + value.substring(6, 10);
+            }
+
+            input.value = formatted;
+          }
+
+          function formatPostalCode(input) {
+            const value = input.value.replace(/[^a-zA-Z0-9]/g, "");
+            let formatted = "";
+
+            for (let i = 0; i < value.length; i++) {
+                if (i === 3) {
+                    formatted += " "; // Add a space after the third character
+                }
+                formatted += value[i].toUpperCase(); // Capitalize letters
+            }
+
+            input.value = formatted; // Set the formatted value back to the input
+          }
+
+          function validateForm() {
+            const firstName = document.getElementById("first-name");
+            const lastName = document.getElementById("last-name");
+            const gender = document.querySelector('input[name="gender"]:checked');
+            const month = document.getElementById("month");
+            const day = document.getElementById("day");
+            const year = document.getElementById("year");
+            const email = document.getElementById("email");
+            const phoneNumber = document.getElementById("phone-number");
+            const streetName = document.getElementById("street-name");
+            const city = document.getElementById("city");
+            const province = document.getElementById("province");
+            const postalCode = document.getElementById("postal-code");
+            const username = document.getElementById("username");
+            const password = document.getElementById("password");
+            const confirmPassword = document.getElementById("confirm-password");
+
+            // Clear previous validation states
+            [firstName, lastName, email, phoneNumber, streetName, city, province, postalCode, username, password, confirmPassword].forEach(field => {
+                field.classList.remove("is-invalid");
+            });
+            [month, day, year].forEach(field => {
+                field.classList.remove("is-invalid");
+            });
+            // Clear radio button validation
+            const genderRadioGroup = document.querySelectorAll('input[name="gender"]');
+            genderRadioGroup.forEach(radio => {
+                radio.classList.remove("is-invalid");
+            });
+
+            let valid = true;
+
+            // Validate each field
+            if (!firstName.value.match(/[A-Za-z]+/)) {
+                firstName.classList.add("is-invalid");
+                valid = false;
+            }
+            if (!lastName.value.match(/[A-Za-z]+/)) {
+                lastName.classList.add("is-invalid");
+                valid = false;
+            }
+            if (!gender) {
+                valid = false; // Gender is required
+                genderRadioGroup.forEach(radio => {
+                    radio.classList.add("is-invalid");
+                });
+            }
+            if (!month.value || !day.value || !year.value) {
+                month.classList.add("is-invalid");
+                day.classList.add("is-invalid");
+                year.classList.add("is-invalid");
+                valid = false;
+            }
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!email.value.match(emailPattern)) {
+                email.classList.add("is-invalid");
+                valid = false;
+            }
+            if (!phoneNumber.value.match(/\([0-9]{3}\) [0-9]{3}-[0-9]{4}/)) {
+                phoneNumber.classList.add("is-invalid");
+                valid = false;
+            }
+            if (streetName.value.trim() === "") {
+                streetName.classList.add("is-invalid");
+                valid = false;
+            }
+            if (city.value.trim() === "") {
+                city.classList.add("is-invalid");
+                valid = false;
+            }
+            if (province.value === "") {
+                province.classList.add("is-invalid");
+                valid = false;
+            }
+            if (postalCode.value.trim() === "") {
+                postalCode.classList.add("is-invalid");
+                valid = false;
+            }
+            if (username.value.trim() === "") {
+                username.classList.add("is-invalid");
+                valid = false;
+            }
+            if (password.value === "") {
+                password.classList.add("is-invalid");
+                valid = false;
+            }
+            if (password.value !== confirmPassword.value) {
+                confirmPassword.classList.add("is-invalid");
+                valid = false;
+            }
+
+            return valid; // Return true only if all validations pass
+        }
+        </script>
+        
+      </section>
+    </main>
+  
+  </body>
+</html>

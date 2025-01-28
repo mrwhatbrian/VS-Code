@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="HTML, JavaScript">
+    <meta name="description" content="JavaScript Tutorial">
+    <meta name="author" content="BCABELLO-MYNBCC">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tutorial</title>
+  </head>
+  <body>
+
+    <h2>JavaScript Arithmetic</h2>
+    <hr>
+
+    <h3>The ** Operator</h3>
+    <p id="demo-exponentiation"></p>
+
+    <h3>Math.Pow()</h3>
+    <p id="demo-math-pow"></p>
+
+    <h3>Operator Precedence</h3>
+    <p>
+      Multiplication has precedence over addition.
+      <br>
+      But parenthesis has precedence over multiplication.
+    </p>
+    <p id="demo-precedence"></p>
+
+    <script>
+      let x = 5;
+      document.getElementById("demo-exponentiation").innerHTML = x ** 2;
+      document.getElementById("demo-math-pow").innerHTML = Math.pow(x,2);
+      document.getElementById("demo-precedence").innerHTML = (100 + 50) * 3 + x;
+    </script>
+
+  </body>
+</html>

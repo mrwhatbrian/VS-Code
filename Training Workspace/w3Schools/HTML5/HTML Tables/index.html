@@ -1,0 +1,103 @@
+<!-- HTML Tables -->
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+	<head>
+		<title>HTML Tables</title>
+		<style type="text/css">
+			h2 {
+				color: #084C61;
+				margin-bottom: 0px;
+			}
+			table {
+				width: 100%;
+			}
+			caption {
+				text-align: left;
+			}
+			table, th, td {
+				border: 1px solid black;
+				border-collapse: collapse;
+				text-align: left;
+			}
+			.table_pad th, .table_pad td {
+				padding: 15px;
+			}
+			.table_strips tr:nth-child(even) {
+				background-color: #DCDCDC;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<h2>HTML Table</h2>
+		<table>
+			<caption>Style: width: 100%, text-align: left, border-collapese: collapse</caption>
+			<tr>
+				<th>Person 1</th>
+				<th>Person 2</th>
+				<th>Person 3</th>
+			</tr>
+			<tr>
+				<td>Emily</td>
+				<td>Tobias</td>
+				<td>Messiah</td>
+			</tr>
+		</table>
+
+		<h2>Padding</h2>
+		<table class="table_pad">
+			<caption>Style: padding: 15px</caption>
+			<tr>
+				<th>Name</th>
+				<th>Age</th>
+			</tr>
+			<tr>
+				<td>Emily Willis</td>
+				<td>25</td>
+			</tr>
+			<tr>
+				<td>Eva Elfie</td>
+				<td>23</td>
+			</tr>
+		</table>
+
+		<h2>Colspan</h2>
+		<table>
+			<caption>Style: colspan="2"</caption>
+			<tr>
+				<th colspan="2">Name</th>
+				<th>Age</th>
+			</tr>
+			<tr>
+				<td>Emily</td>
+				<td>Willis</td>
+				<td>25</td>
+			</tr>
+			<tr>
+				<td>Eva</td>
+				<td>Elfie</td>
+				<td>23</td>
+			</tr>
+		</table>
+
+		<h2>Rowspan</h2>
+		<caption>Style: rowspan="2"</caption>
+		<table>
+			<tr>
+				<th>Name</th>
+				<td>Emily Willis</td>
+			</tr>
+			<tr>
+				<th rowspan="2">Award</th>
+				<td>Favorite Porn Star Creator</td>
+			</tr>
+			<tr>
+				<td>Mainstream Venture of the Year</td>
+			</tr>
+		</table>
+
+	</body>
+</html>

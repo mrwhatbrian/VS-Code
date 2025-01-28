@@ -1,0 +1,167 @@
+<!-- HTML Table Colgroup -->
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+	<head>
+		<title>HTML Table Colgroup</title>
+		<style type="text/css">
+			h2 {
+				margin-bottom: 0;
+				color: #084C61;
+			}
+			caption {
+				text-align: left;
+			}
+			table, th, td {
+				border: 1px solid black;
+				border-collapse: collapse;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<h2>Table Colgroup</h2>
+		<table style="width: 100%;">
+			<colgroup>
+				<col span="2" style="background-color: #73D2DE;">
+			</colgroup>
+			<tr>
+				<th>MON</th>
+				<th>TUE</th>
+				<th>WED</th>
+				<th>THU</th>
+				<th>FRI</th>
+				<th>SAT</th>
+				<th>SUN</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>
+				<td>7</td>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td>9</td>
+				<td>10</td>
+				<td>11</td>
+				<td>12</td>
+				<td>13</td>
+				<td>14</td>
+			</tr>
+		</table>
+
+		<h2>Multiple Col Elements</h2>
+		<table style="width: 100%;">
+			<colgroup>
+				<col span="2" style="background-color: #73D2DE;">
+				<col span="3" style="background-color: #D81159;">
+			</colgroup>
+			<tr>
+				<th>MON</th>
+				<th>TUE</th>
+				<th>WED</th>
+				<th>THU</th>
+				<th>FRI</th>
+				<th>SAT</th>
+				<th>SUN</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>
+				<td>7</td>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td>9</td>
+				<td>10</td>
+				<td>11</td>
+				<td>12</td>
+				<td>13</td>
+				<td>14</td>
+			</tr>
+		</table>
+
+		<h2>Empty Colgroups</h2>
+		<table style="width: 100%;">
+			<caption>No Style on Columns 1, 2, and 3</caption>
+			<colgroup>
+				<col span="3">
+				<col span="2" style="background-color: #D81159;">
+			</colgroup>
+			<tr>
+				<th>MON</th>
+				<th>TUE</th>
+				<th>WED</th>
+				<th>THU</th>
+				<th>FRI</th>
+				<th>SAT</th>
+				<th>SUN</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>
+				<td>7</td>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td>9</td>
+				<td>10</td>
+				<td>11</td>
+				<td>12</td>
+				<td>13</td>
+				<td>14</td>
+			</tr>
+		</table>
+
+		<h2>Hide Columns</h2>
+		<table style="width: 100%;">
+			<caption>Columns 4 and 5 were Hide</caption>
+			<colgroup>
+				<col span="3">
+				<col span="2" style="visibility: collapse;">
+			</colgroup>
+			<tr>
+				<th>MON</th>
+				<th>TUE</th>
+				<th>WED</th>
+				<th>THU</th>
+				<th>FRI</th>
+				<th>SAT</th>
+				<th>SUN</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>
+				<td>7</td>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td>9</td>
+				<td>10</td>
+				<td>11</td>
+				<td>12</td>
+				<td>13</td>
+				<td>14</td>
+			</tr>
+		</table>
+
+	</body>
+</html>

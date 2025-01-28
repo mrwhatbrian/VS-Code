@@ -1,0 +1,112 @@
+<!-- CSS Flexbox Layout -->
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+	<head>
+		<title>CSS Flexbox Layout</title>
+		<meta charset="UTF-8">
+		<meta name="description" content="CSS Framework">
+		<meta name="keywords" content="CSS, Framework">
+		<meta name="author" content="Brian Cabs">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style type="text/css">
+			* {
+				box-sizing: border-box;
+			}
+			body {
+				font-family: Arial, Helvetica, sans-serif;
+			}
+
+			/* Style the Header */
+			header {
+				background-color: #177E89;
+				color: #FFFFFF;
+				padding: 30px;
+				text-align: center;
+				font-size: 30px;
+			}
+
+			/* Container for Flexboxes */
+			section {
+				display: -webkit-flex;
+				display: flex;
+			}
+
+			/* Style the Navigation Menu */
+			nav {
+				-webkit-flex: 1;
+				-ms-flex: 1;
+				flex: 1;
+				background-color: #323031;
+				padding: 20px;
+			}
+
+			/* Style the List Inside the Menu */
+			nav ul {
+				list-style-type: none;
+				padding: 0;
+			}
+
+			nav li a {
+				color: #FFFFFF;
+				text-decoration: none;
+			}
+
+			/* Style the Content */
+			article {
+				-webkit-flex: 3;
+				-ms-flex: 3;
+				flex: 3;
+				background-color: #FFFFFF;
+				padding: 10px;
+			}
+
+			/* Style the Footer */
+			footer {
+				background-color: #323031;
+				padding: 10px;
+				text-align: center;
+				color: #FFFFFF;
+			}
+
+			/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+			@media (max-width: 600px) {
+				section {
+			    	-webkit-flex-direction: column;
+			    	flex-direction: column;
+			  }
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<header>
+			<h1>Hello World!</h1>
+		</header>
+
+		<section>
+			<nav>
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">News</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+
+			<article>
+				<h1>Home</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et tortor at risus viverra adipiscing. Pulvinar sapien et ligula ullamcorper malesuada. Tortor aliquam nulla facilisi cras fermentum odio. Nunc non blandit massa enim nec dui. Lectus magna fringilla urna porttitor rhoncus dolor. A lacus vestibulum sed arcu non odio. Ultrices mi tempus imperdiet nulla. Posuere urna nec tincidunt praesent semper feugiat nibh sed. Tellus integer feugiat scelerisque varius morbi enim. Enim neque volutpat ac tincidunt vitae semper quis lectus nulla. Cursus sit amet dictum sit amet justo donec enim diam.</p>
+
+				<p>Vitae elementum curabitur vitae nunc sed velit dignissim sodales ut. Posuere morbi leo urna molestie at elementum. Quis risus sed vulputate odio ut enim blandit volutpat maecenas. Libero enim sed faucibus turpis in eu. Amet justo donec enim diam. Felis eget velit aliquet sagittis id. Non nisi est sit amet facilisis magna etiam tempor. Viverra nam libero justo laoreet sit amet cursus sit amet. Parturient montes nascetur ridiculus mus mauris vitae. Nunc sed velit dignissim sodales ut. Euismod quis viverra nibh cras pulvinar. Sit amet facilisis magna etiam tempor. Aliquam nulla facilisi cras fermentum. Dolor sit amet consectetur adipiscing. Eu ultrices vitae auctor eu augue ut lectus. Pretium viverra suspendisse potenti nullam ac tortor vitae purus faucibus. Id ornare arcu odio ut sem nulla.</p>
+			</article>
+		</section>
+
+		<footer>
+			<p>&copy; Copyright 2024</p>
+		</footer>
+
+	</body>
+</html>

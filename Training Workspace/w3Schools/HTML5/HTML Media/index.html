@@ -1,0 +1,57 @@
+<!-- HTML Media -->
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+	<head>
+		<title>HTML Media</title>
+		<meta charset="UTF-8">
+		<meta name="description" content="HTML Media">
+		<meta name="keywords" content="HTML5">
+		<meta name="author" content="Brian Cabs">
+		<meta name="viewport" content="width=device=width, initial-scale=1.0">
+	</head>
+	<body>
+
+		<div style="text-align:center"> 
+			<button onclick="playPause()">Play/Pause</button> 
+			<button onclick="makeBig()">Big</button>
+			<button onclick="makeSmall()">Small</button>
+			<button onclick="makeNormal()">Normal</button>
+
+			<br><br>
+
+			<video id="video1" width="2160">
+				<source src="https://cdn.pixabay.com/video/2024/02/28/202368-918049003_large.mp4" type="video/mp4">
+				<source src="clip.ogg" type="video/ogg">
+				Your browser does not support HTML video.
+			</video>
+
+			<p>Video courtesy of <a href="https://www.pexels.com/video/a-river-between-green-field-and-mountains-14873245/" target="_blank">Cristian Rossa</a>.</p>
+		</div> 
+
+		<script type="text/javascript"> 
+			var myVideo = document.getElementById("video1"); 
+
+			function playPause() { 
+				if (myVideo.paused) 
+					myVideo.play(); 
+				else 
+					myVideo.pause(); 
+			} 
+
+			function makeBig() { 
+			    myVideo.width = 3840; 
+			} 
+
+			function makeSmall() { 
+			    myVideo.width = 1080; 
+			} 
+
+			function makeNormal() { 
+			    myVideo.width = 2160; 
+			} 
+		</script> 
+
+	</body>
+</html>
