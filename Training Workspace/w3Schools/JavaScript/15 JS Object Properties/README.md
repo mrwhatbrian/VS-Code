@@ -96,7 +96,7 @@ delete person["age"];
 ### Note
 
 > The delete keyword deletes both the value of the property and the property itself.
-
+>
 > After deletion, the property cannot be used before it is added back again.
 
 ## Nested Objects
