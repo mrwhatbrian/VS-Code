@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Object Display</title>
+  </head>
+  <body>
+    <h1>JavaScript Object Display</h1>
+    <hr />
+    <h2>Display Properties in a Loop</h2>
+    <p id="loop"></p>
+    <h2>Using Object.values()</h2>
+    <p id="values"></p>
+    <h2>Using Object.entries()</h2>
+    <p id="entries"></p>
+    <h2>Using JSON.stringify()</h2>
+    <p id="json"></p>
+  </body>
+  <script>
+    // Object cat
+    const cat = {
+      name: "Siri",
+      age: 1,
+      color: "White",
+      eyes: "Brown",
+      gender: "Male",
+    };
+
+    // Display Properties in a Loop
+
+    // Build a Text
+    let text = "";
+
+    for (let info in cat) {
+      text += cat[info] + " ";
+    }
+
+    document.getElementById("loop").innerHTML = text;
+
+    // Using Object.values()
+    const myArray = Object.values(cat);
+
+    document.getElementById("values").innerHTML = myArray;
+
+    // Using Object.entries()
+    let text2 = "";
+
+    for (let [key, value] of Object.entries(cat)) {
+      text2 += key + ": " + value + "<br>";
+    }
+
+    document.getElementById("entries").innerHTML = text2;
+
+    // Using JSON.stringify()
+    document.getElementById("json").innerHTML = JSON.stringify(cat);
+  </script>
+</html>

@@ -31,13 +31,14 @@ objectName["propertyName"]
 Methods are **actions** that can be performed on objects.
 
 Methods are **function definitions** stored as **property values**.
-| Property | Property Value |
-| --- | --- |
-| firstName | John |
-| lastName | Doe |
-| age | 50 |
-| eyeColor | blue |
-| fullName | function() {return this.firstName + " " + this.lastName;} |
+
+| Property  | Property Value                                            |
+| --------- | --------------------------------------------------------- |
+| firstName | John                                                      |
+| lastName  | Doe                                                       |
+| age       | 50                                                        |
+| eyeColor  | blue                                                      |
+| fullName  | function() {return this.firstName + " " + this.lastName;} |
 
 # In JavaScript, Objects are King.
 

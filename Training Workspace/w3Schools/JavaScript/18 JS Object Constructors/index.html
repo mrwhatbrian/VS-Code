@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Object Constructors</title>
+  </head>
+  <body>
+    <h1>JavaScript Object Constructors</h1>
+    <hr />
+    <h2>Object Constructor Functions</h2>
+    <p id="obj-constructor"></p>
+    <h2>Property Default Values</h2>
+    <p id="prop-def-values"></p>
+    <h2>Adding a Property to an Object</h2>
+    <p id="add-prop-object"></p>
+    <h2>Adding a Property to a Constructor</h2>
+    <p id="add-prop-constructor"></p>
+    <h2>Constructor Function Methods</h2>
+    <p id="const-func-methods"></p>
+    <h2>Adding a Method to an Object</h2>
+    <p id="add-metd-objects"></p>
+    <h2>Adding a Method to a Constructor</h2>
+    <p id="add-metd-constructor"></p>
+  </body>
+  <script>
+    function CatSiri(name, age, eye) {
+      this.name = name;
+      this.age = age;
+      this.eyeColor = eye;
+    }
+
+    // Create a CatSiri object
+    const siri1 = new CatSiri("Siri", 1, "Brown");
+    const siri2 = new CatSiri("Lil Siri", 1, "Blue");
+
+    document.getElementById(
+      "obj-constructor"
+    ).innerHTML = `Hi, I'm ${siri1.name}<br>Age: ${siri1.age}<br>Eyes Color: ${siri1.eyeColor}`;
+
+    // Property Default Values
+    function CatAlexa(name, age, eyeColor) {
+      this.name = name;
+      this.age = age;
+      this.eyeColor = eyeColor;
+      this.nationality = "Domestic";
+    }
+
+    // Create a CatAlexa object
+    const alexa1 = new CatAlexa("Alexa", 3.5, "Brown");
+    const alexa2 = new CatAlexa("Alexa", 4, "Brown");
+
+    document.getElementById("prop-def-values").innerHTML =
+      "Name: " +
+      alexa1.name +
+      "<br>Age: " +
+      alexa1.age +
+      "<br>Eyes Color: " +
+      alexa1.eyeColor +
+      "<br>Nationality: " +
+      alexa1.nationality;
+
+    // Adding a Property to an Object
+    alexa2.nationality = "Canadian";
+
+    document.getElementById("add-prop-object").innerHTML =
+      "Name: " +
+      alexa2.name +
+      "<br>Age: " +
+      alexa2.age +
+      "<br>Eyes Color: " +
+      alexa2.eyeColor +
+      "<br>Nationality: " +
+      alexa2.nationality;
+
+    // Adding a Property to a Constructor
+    CatSiri.prototype.nationality = "Domestic";
+
+    document.getElementById("add-prop-constructor").innerHTML =
+      "Name: " +
+      siri2.name +
+      "<br>Age: " +
+      siri2.age +
+      "<br>Eyes Color: " +
+      siri2.eyeColor +
+      "<br>Nationality: " +
+      siri2.nationality;
+
+    // Constructor Function Methods
+    function Baby(name, age, birthdate, gender) {
+      this.name = name;
+      this.age = age;
+      this.birthdate = birthdate;
+      this.gender = gender;
+      this.fullName = function () {
+        return (
+          "Name: " +
+          this.name +
+          "<br>Age: " +
+          this.age +
+          "<br>Date of Birth: " +
+          this.birthdate +
+          "<br>Gender: " +
+          this.gender
+        );
+      };
+    }
+
+    // Create a Baby Object
+    const reon = new Baby(
+      "Reon",
+      4 + " months old",
+      "September 5, 2024",
+      "Male"
+    );
+
+    document.getElementById("const-func-methods").innerHTML = reon.fullName();
+
+    // Adding a Method to an Object
+    reon.secondName = function (name) {
+      this.name = name;
+    };
+
+    reon.secondName("Isaiah");
+
+    document.getElementById("add-metd-objects").innerHTML = reon.fullName();
+
+    // Adding a Method to a Constructor
+    Baby.prototype.addName = function (secondName) {
+      this.secondName = secondName;
+    };
+
+    reon.addName("Izzy");
+
+    document.getElementById("add-metd-constructor").innerHTML =
+      reon.fullName() + "<br>Nickname: " + reon.secondName;
+  </script>
+</html>
