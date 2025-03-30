@@ -1,6 +1,6 @@
 # JavaScript Object Properties
 
-### An Object is an Unordered Collection of Properties
+## An Object is an Unordered Collection of Properties
 
 Properties are the most important part of JavaScript objects.
 
