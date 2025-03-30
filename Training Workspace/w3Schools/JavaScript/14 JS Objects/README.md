@@ -31,17 +31,6 @@ objectName["propertyName"];
 Methods are **actions** that can be performed on objects.
 
 Methods are **function definitions** stored as **property values**.
-<<<<<<< HEAD
-
-| Property  | Property Value                                            |
-| --------- | --------------------------------------------------------- |
-| firstName | John                                                      |
-| lastName  | Doe                                                       |
-| age       | 50                                                        |
-| eyeColor  | blue                                                      |
-| fullName  | function() {return this.firstName + " " + this.lastName;} |
-=======
->>>>>>> 48fe2aa0534cefd2fd81402c3e75d83cae21d949
 
 | Property  | Property Value                                            |
 | --------- | --------------------------------------------------------- |
