@@ -1,6 +1,6 @@
 # JavaScript Object Properties
 
-### An Object is an Unordered Collection of Properties
+## An Object is an Unordered Collection of Properties
 
 Properties are the most important part of JavaScript objects.
 
@@ -10,36 +10,36 @@ Properties can be changed, added, deleted, and some are read only.
 
 The syntax for accessing the property of an object is:
 
-```sh
+```js
 // objectName.property
 let age = person.age;
 ```
 
 OR
 
-```sh
+```js
 //objectName["property"]
 let age = person["age"];
 ```
 
 OR
 
-```sh
+```js
 //objectName[expression]
 let age = person[x];
 ```
 
 ### Examples
 
-```sh
+```js
 person.firstname + " is " + person.age + " years old.";
 ```
 
-```sh
+```js
 person["firstname"] + " is " + person["age"] + " years old.";
 ```
 
-```sh
+```js
 let x = "firstname";
 let y = "age";
 person[x] + " is " + person[y] + " years old.";
@@ -49,12 +49,12 @@ person[x] + " is " + person[y] + " years old.";
 
 You can add new properties to an existing object by simply giving it a value:
 
-```sh
+```js
 const person = {
   firstname: "John",
   lastname: "Doe",
   age: 50,
-  eyecolor: "blue"
+  eyecolor: "blue",
 };
 
 person.nationality = "English";
@@ -66,12 +66,12 @@ console.log(person.firstname + " is " + person.nationality + ".");
 
 The **delete** keyword deletes a property from an object:
 
-```sh
+```js
 const person = {
   firstName: "John",
   lastName: "Doe",
   age: 50,
-  eyeColor: "blue"
+  eyeColor: "blue",
 };
 
 delete person.age;
@@ -82,12 +82,12 @@ console.log(person.firstname + " is " + person.age + " years old.");
 
 OR
 
-```sh
+```js
 const person = {
   firstName: "John",
   lastName: "Doe",
   age: 50,
-  eyeColor: "blue"
+  eyeColor: "blue",
 };
 
 delete person["age"];
@@ -103,33 +103,33 @@ delete person["age"];
 
 Property values in an object can be other objects:
 
-```sh
+```js
 myObj = {
-  name:"John",
-  age:30,
+  name: "John",
+  age: 30,
   myCars: {
-    car1:"Ford",
-    car2:"BMW",
-    car3:"Fiat"
-  }
-}
+    car1: "Ford",
+    car2: "BMW",
+    car3: "Fiat",
+  },
+};
 ```
 
 You can access nested objects using the dot notation or the bracket notation:
 
-```sh
+```js
 myObj.myCars.car2;
 ```
 
-```sh
+```js
 myObj.myCars["car2"];
 ```
 
-```sh
+```js
 myObj["myCars"]["car2"];
 ```
 
-```sh
+```js
 let p1 = "myCars";
 let p2 = "car2";
 myObj[p1][p2];
